@@ -36,7 +36,7 @@ set :keep_releases, 5
 # set :domain, "173.255.203.8"
 set :vish, "96.126.126.162"
 # set :rahu, "50.116.26.227"
-set :port_number, "60040"
+# set :port_number, "60040"
 
 role :web, vish
 role :app, vish
