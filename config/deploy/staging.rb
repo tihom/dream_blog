@@ -24,6 +24,7 @@ set :branch, "master"
 set :rails_env, 'staging'
 set :stage, 'staging'
 
+
 set :keep_releases, 5
 
 
@@ -35,6 +36,7 @@ set :keep_releases, 5
 # set :domain, "173.255.203.8"
 set :vish, "96.126.126.162"
 # set :rahu, "50.116.26.227"
+set :port_number, "60040"
 
 role :web, vish
 role :app, vish
@@ -48,6 +50,10 @@ role :db,  vish, :primary => true # This is where Rails migrations will run
 namespace :deploy do
   desc "Copy config files"
 
+  before "deploy:finalize_update" do 
+    run "ln -sf #{shared_path}/database.yml #{latest_release}/config/database.yml"
+  end
+
   after "deploy:update_code" do
     run "export RAILS_ENV=staging"
     run "ln -nfs #{shared_path}/system #{release_path}/public/system"
@@ -58,6 +64,7 @@ namespace :deploy do
     run "chmod 777 -R #{release_path}/public"
     run "chmod 777 -R #{release_path}/config"
 
+    # run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     # run "cp #{shared_path}/config/database.yml #{release_path}/config/"
     # run "cp #{shared_path}/config/environments/staging.rb #{release_path}/config/environments/staging.rb"
 
