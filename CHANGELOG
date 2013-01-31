@@ -1,0 +1,56 @@
+commit 9aad21b936b36f597481e72d52d9bb61841b4f8a
+Author: Soon Van <cog@randomecho.com>
+
+    Match Page permission descriptions to rules
+
+commit f46327073d2d6169dd5f0c3f5ec758ba5e02614f
+Author: Soon Van <cog@randomecho.com>
+
+    RSS description message can now address single or multi-author setup
+
+commit 75eab080aa2a8ef06c43a3147d503fad2e566e5c
+Author: Soon Van <cog@randomecho.com>
+
+    Update Google Webmasters link about rel=canonical
+
+commit 16840427ca6e1c6cce9e0d6fcc06a42194d9992d
+Merge: 54e741a 9aad21b
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Merge pull request #105 from randomecho/page-rights-seed-description
+
+commit b19b9835926da3144dfb38ead4962b22396f14e9
+Merge: 1684042 75eab08
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Merge pull request #106 from randomecho/copyedit-seo-settings
+
+commit e81d25cc5a91b225cc686189e344936b5bc0ee3f
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Fix a bug in the automated migration process. Under some undefined circumstances (reproduced on Debian wit Ruby ruby 1.9.2p136 but not on Mac OS 10.8 Ruby 1.9.3p194), administrator would be kicked out of the application because the sort_by{} would get confused where a sort is enough. Tested on both environments
+
+commit baf7704ba74cd4bf0ebb10242d4e467ab7470c92
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Fixes typo behavior when trying to perform an unauthorized action within the admin. Instead of redirecting to the login, user is redirected to the dashboard. Fixes #104
+
+commit 011076d36f11279efb97b3baf3028c92dd93d272
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Remove the Rights model.
+
+commit a265ef4531756adbcd7dea91714edcb6f8759117
+Author: Yannick Francois <yannick.francois@free.fr>
+
+    put feedback back
+
+commit 9abbcc510a7c546b92cf9a8ee32460a74467429c
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Fixes a regression introduced by commit #a265ef4531756adbcd7dea91714edcb6f8759117
+
+commit 1c75ce725a790c28660aebb492082e19075f3542
+Author: Frédéric de Villamil <frederic@de-villamil.com>
+
+    Fixes another regression. Need to add some tests for the dashboard with some comments and articles
