@@ -15,22 +15,22 @@ set :use_sudo, true
 
 set :scm, :git
 set :scm_verbose, true
-# set :repository, 'git@github.com:rahulcee/dream_app.git'
-set :repository, "/home/mohitagg/dream_blog"
+set :repository, 'git@github.com:tihom/dream_blog.git'
+#set :repository, "/home/mohitagg/dream_blog"
 
-set :branch, "development"
+set :branch, "master"
 # set :repository_cache, "git_cache"
 
 set :rails_env, 'staging'
 set :stage, 'staging'
 
-set :keep_releases, 10
+set :keep_releases, 5
 
 
-# set :deploy_via, :copy
-# set :deploy_via, :rsync_with_remote_cache
-# set :rsync_options, "-az --delete -e 'ssh -p 22' --exclude=.git --delete-excluded --verbose" 
-# set :git_enable_submodules, 1
+ # set :deploy_via, :copy
+ set :deploy_via, :rsync_with_remote_cache
+ set :rsync_options, "-az --delete -e 'ssh -p 22' --exclude=.git --delete-excluded --verbose" 
+ set :git_enable_submodules, 1
 
 # set :domain, "173.255.203.8"
 set :vish, "96.126.126.162"
